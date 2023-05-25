@@ -160,7 +160,7 @@ main #home-section h1 {
 }
 
 main section h4 {
-  word-spacing: 10px;
+  word-spacing: 5px;
   letter-spacing: 3px;
 }
 
@@ -219,6 +219,11 @@ main #home-div {
 
   header nav ul li {
     margin: 0%;
+  }
+
+  main section h4 {
+    word-spacing: 10px;
+    letter-spacing: 3px;
   }
 }
 
