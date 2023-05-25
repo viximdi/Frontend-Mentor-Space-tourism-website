@@ -304,7 +304,7 @@ main #home-div {
 
 #mars-main section:last-child h1 {
   font-size: 4em;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   font-weight: 700;
   margin: 5% 0;
 }
@@ -344,6 +344,13 @@ main #home-div {
 
   #mars-main section:last-child {
     font-size: 1.3em;
+  }
+
+  #mars-main section:last-child h1 {
+    font-size: 4em;
+    letter-spacing: 20px;
+    font-weight: 700;
+    margin: 5% 0;
   }
 }
 
