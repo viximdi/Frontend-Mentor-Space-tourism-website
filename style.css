@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#home-body {
+  background: url(./assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  height: 15%;
+}
+
+header nav {
+  position: relative;
+  left: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#checker {
+  position: absolute;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  background-color: brown;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+#close {
+  display: none;
+}
+
+header nav ul {
+  position: absolute;
+  top: 110%;
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(25, 22, 36);
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid white;
+  border-right: none;
+}
+
+input[type="checkbox"]:checked ~ ul {
+  animation: grow 1s forwards;
+}
+
+input[type="checkbox"]:checked ~ #close {
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ #menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 775px) {
+  @keyframes grow {
+    from {
+      width: 0%;
+      transform-origin: 100% 50%;
+    }
+
+    to {
+      width: 70%;
+      height: 70vh;
+      padding: 10%;
+      transform-origin: 100% 50%;
+    }
+  }
+
+  header nav ul {
+    background: url(./assets/home/background-home-desktop.jpg);
+    height: 0vh;
+    overflow: hidden;
+  }
+
+  main #home-section h1 {
+    font-size: 2em !important;
+  }
+}
+
+header nav ul li {
+  display: flex;
+  margin: 5%;
+  font-weight: 700;
+  text-shadow: 2px 2px 1px rgb(14, 13, 13);
+  color: gray;
+  font-size: 1.3em;
+}
+
+header nav ul li a {
+  margin-left: 8%;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-top: 2px;
+}
+
+header nav svg {
+  cursor: pointer;
+  margin-right: 5%;
+}
+
+#home-main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 85%;
+}
+
+main section {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+main #home-section {
+  max-width: 400px;
+}
+
+main #home-section h1 {
+  font-size: 4em;
+  letter-spacing: 40px;
+  font-weight: 900;
+  margin: 5% 0;
+}
+
+main section h4 {
+  word-spacing: 10px;
+  letter-spacing: 3px;
+}
+
+main #home-div {
+  width: 200px;
+  height: 200px;
+  max-width: 50%;
+  max-height: 50%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  background-color: white;
+  color: rgb(59, 56, 56);
+}
+
+@media only screen and (min-width: 775px) {
+  header nav svg {
+    display: none;
+  }
+
+  #home-body {
+    background: url(./assets/home/background-home-desktop.jpg);
+  }
+  #home-main {
+    flex-direction: row;
+    padding-top: 15%;
+    width: 100%;
+  }
+
+  main #home-div {
+    position: relative;
+    top: 15%;
+  }
+
+  header nav {
+    width: 700px;
+    max-width: 80%;
+    padding: 1%;
+    background-color: rgba(30, 30, 49, 0.5);
+  }
+
+  header nav ul {
+    width: 100%;
+    align-items: flex-start;
+    padding: 2%;
+    flex-direction: row;
+    justify-content: space-around;
+    position: static;
+    background-color: transparent;
+    border: none;
+  }
+
+  header nav ul li {
+    margin: 0%;
+  }
+}
+
+/* MARS STYLE*/
+
+#mars-body,
+#moon-body,
+#europa-body,
+#titan-body {
+  background: url(./assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#heading {
+  padding: 4% 10%;
+  padding-bottom: 10%;
+  font-size: 1em;
+}
+
+#heading > span {
+  color: gray;
+  font-size: 1.3em;
+  margin-right: 1%;
+  position: relative;
+  top: 2px;
+}
+
+#mars-main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+}
+
+#mars-main section:first-child {
+  background: url(./assets/destination/image-mars.png);
+  width: 200px;
+  height: 200px;
+  max-width: 70%;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+#mars-main #moon-image:first-child {
+  background: url(./assets/destination/image-moon.png) !important;
+  background-size: cover !important;
+}
+
+#mars-main #europa-image:first-child {
+  background: url(./assets/destination/image-europa.png) !important;
+  background-size: cover !important;
+}
+
+#mars-main #titan-image:first-child {
+  background: url(./assets/destination/image-titan.png) !important;
+  background-size: cover !important;
+}
+
+#mars-main section:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  list-style: none;
+}
+
+#mars-main section:last-child li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+.active {
+  padding-bottom: 30%;
+  border-bottom: 2px solid white;
+}
+
+#mars-main section:last-child h1 {
+  font-size: 4em;
+  letter-spacing: 20px;
+  font-weight: 700;
+  margin: 5% 0;
+}
+
+#mars-main section:last-child p {
+  font-size: 0.8em;
+}
+
+#mars-main section:last-child hr {
+  margin: 5% 0;
+}
+
+#mars-main section:last-child > div {
+  display: flex;
+}
+
+#mars-main section:last-child > div > div {
+  margin-right: 10%;
+}
+
+@media only screen and (min-width: 775px) {
+  #mars-main {
+    flex-direction: row;
+  }
+
+  #mars-main section:first-child {
+    width: 350px;
+    height: 350px;
+    max-width: 70%;
+  }
+
+  #heading {
+    padding: 3% 8%;
+    padding-bottom: 1%;
+    font-size: 1.4em;
+  }
+
+  #mars-main section:last-child {
+    font-size: 1.3em;
+  }
+}
+
+/* CREW STYLE*/
+
+#crew-body {
+  background: url(./assets/crew/background-crew-mobile.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#crew-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+}
+
+#crew-main section:first-child > div {
+  width: 60%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  display: flex;
+}
+
+#crew-main section:first-child > div > a {
+  width: 15px;
+  height: 15px;
+  margin-right: 10%;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(111, 108, 108);
+}
+
+#crew-main section:first-child > div > a:hover {
+  background-color: whitesmoke;
+}
+
+#crew-main section:first-child > p {
+  margin: 4% 0;
+}
+
+#crew-main section:first-child > h2 {
+  color: gray;
+}
+
+#crew-main section:first-child > h1 {
+  margin-top: 2%;
+  font-size: 2em;
+}
+
+#crew-main section:last-child {
+  min-height: 60%;
+}
+
+#crew-main section:last-child > div {
+  background: url(./assets/crew/image-anousheh-ansari.png);
+  background-size: cover !important;
+  height: 100%;
+  width: 100%;
+}
+
+#crew-main section:last-child > #commander {
+  background: url(./assets/crew/image-douglas-hurley.png);
+  background-size: cover;
+}
+
+#crew-main section:last-child > #pilot {
+  background: url(./assets/crew/image-victor-glover.png);
+  background-size: cover;
+}
+
+#crew-main section:last-child > #Specialist {
+  background: url(./assets/crew/image-mark-shuttleworth.png);
+  background-size: cover;
+}
+
+#crew-main section:first-child .active-crew {
+  background-color: whitesmoke;
+}
+
+@media only screen and (min-width: 775px) {
+  #crew-body {
+    background: url(./assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+  }
+
+  #crew-main {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #crew-main section:first-child {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #crew-main section:last-child {
+    min-width: 40%;
+    height: 100%;
+  }
+
+  #crew-main section:last-child > div {
+    background: url(./assets/crew/image-anousheh-ansari.png);
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* TECHNOLOGY STYLE*/
+
+#tech-body {
+  background: url(./assets/technology/background-technology-mobile.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+#tech-body main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  align-items: center;
+  height: 75vh;
+}
+
+#tech-body main > section:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
+
+#tech-body main > section:first-child > #nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 5%;
+}
+
+#tech-body main > section:first-child > #nav > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 5%;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 5%;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#tech-body main > section:first-child > #nav > a:hover {
+  background-color: white;
+  color: black;
+}
+
+#tech-body main > section:first-child > #nav .active-nav {
+  background-color: white;
+  color: black;
+}
+
+#tech-body main > section:last-child {
+  width: 100%;
+  max-width: 700px;
+  height: 60%;
+}
+
+#tech-body main > section:first-child h1 {
+  font-size: 2.2em;
+  margin: 5% 0;
+}
+
+#tech-body main > section:last-child > #tech-image {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  background: url(./assets/technology/image-space-capsule-portrait.jpg);
+  background-size: cover !important;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+#tech-body main > section:last-child > .spaceport-img {
+  background: url(./assets/technology/image-spaceport-landscape.jpg) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+#tech-body main > section:last-child > .vehicle-img {
+  background: url(./assets/technology/image-launch-vehicle-landscape.jpg) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+@media only screen and (min-width: 775px) {
+  #tech-body {
+    background: url(./assets/technology/background-technology-desktop.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+  }
+  #tech-body main {
+    justify-content: space-between;
+    padding-right: 0;
+  }
+
+  #tech-body main > section:first-child {
+    margin-top: 7%;
+    flex-direction: row;
+  }
+
+  #tech-body main > section:first-child > #nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tech-body main > section:first-child > #nav > a {
+    padding: 25%;
+    margin-bottom: 20%;
+    margin-right: 0%;
+  }
+
+  #tech-body main > section:last-child > .spaceport-img {
+    background: url(./assets/technology/image-spaceport-portrait.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+  }
+
+  #tech-body main > section:last-child > .vehicle-img {
+    background: url(./assets/technology/image-launch-vehicle-portrait.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #tech-body main > section:last-child {
+    height: 80%;
+  }
+
+  #tech-body main > section:last-child > #tech-image {
+    width: 500px;
+    height: 100%;
+    margin-left: 36%;
+    background: url(./assets/technology/image-space-capsule-portrait.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat;
+  }
+}

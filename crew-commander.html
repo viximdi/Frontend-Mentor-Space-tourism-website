@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="crew-body">
+    <header>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="24" cy="24" r="24" fill="#FFF" />
+            <path
+              fill="#0B0D17"
+              d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
+          </g>
+        </svg>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="checker" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="21"
+          id="menu-icon"
+          for="checker">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="21"
+          id="close">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+            <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+          </g>
+        </svg>
+        <ul>
+          <li>00 <a href="index.html">Home</a></li>
+          <li>01 <a href="destination-moon.html">Destination</a></li>
+          <li>03 <a href="crew-engineer.html" class="active">Crew</a></li>
+          <li>04 <a href="technology-capsule.html">Technologies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 id="heading">
+      <span> 02 </span>
+      MEET YOUR CREW
+    </h1>
+    <main id="crew-main">
+      <section>
+        <h2>COMMANDER</h2>
+        <h1>DOUGLAS HURLEY</h1>
+        <p>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.</p
+        >
+        <div>
+          <a href="crew-specialist.html"></a>
+          <a href="crew-pilot.html"></a>
+          <a href="crew-commander.html" class="active-crew"></a>
+          <a href="crew-engineer.html"></a>
+        </div>
+      </section>
+      <section>
+        <div id="commander"></div>
+      </section>
+    </main>
+  </body>
+</html>
